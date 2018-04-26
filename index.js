@@ -1,36 +1,34 @@
 ;(function(window) {
-  return function (hook) {
-    DocsifyCodefund = {
-      create: function(codefundId) {
-        return function(hook, vm) {
-          hook.ready(function() {
-            var style = document.createElement('style')
-            var css = '#codefund_ad span.cf-wrapper {background-color: rgba(0,0,0,0)}'
-            style.type = 'text/css'
-            if (style.styleSheet){
-              style.styleSheet.cssText = css
-            } else {
-              style.appendChild(document.createTextNode(css))
-            }
-            document.head.appendChild(style)
+  window.DocsifyCodefund = {
+    create: function(codefundId) {
+      return function(hook, vm) {
+        hook.ready(function() {
+          var style = document.createElement('style')
+          var css = '#codefund_ad span.cf-wrapper {background-color: rgba(0,0,0,0)}'
+          style.type = 'text/css'
+          if (style.styleSheet){
+            style.styleSheet.cssText = css
+          } else {
+            style.appendChild(document.createTextNode(css))
+          }
+          document.head.appendChild(style)
 
-            var script = document.createElement('script')
-            script.src = "https://codesponsor.io/scripts/" + codefundId + "/embed.js"
-            document.body.appendChild(script)
-          })
+          var script = document.createElement('script')
+          script.src = "https://codesponsor.io/scripts/" + codefundId + "/embed.js"
+          document.body.appendChild(script)
+        })
 
-          hook.doneEach(function () {
-            // create a codefun container
-            let nav = document.getElementsByClassName('sidebar-nav')
-            let codefunContainer = document.createElement('div')
-            codefunContainer.id = 'codefund_ad'
-            nav[0].insertBefore(codefunContainer, nav[0].firstChild)
+        hook.doneEach(function () {
+          // create a codefun container
+          let nav = document.getElementsByClassName('sidebar-nav')
+          let codefunContainer = document.createElement('div')
+          codefunContainer.id = 'codefund_ad'
+          nav[0].insertBefore(codefunContainer, nav[0].firstChild)
 
-            if (document.getElementsByClassName('cf-wrapper').length === 0) {
-              window._codefund && window._codefund.serve();
-            }
-          })
-        }
+          if (document.getElementsByClassName('cf-wrapper').length === 0) {
+            window._codefund && window._codefund.serve();
+          }
+        })
       }
     }
   }
