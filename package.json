@@ -1,0 +1,19 @@
+{
+  "name": "docsify-plugin-codefund",
+  "version": "1.0.0",
+  "description": "a plugin to make you easy to join up [codefund](https://codesponsor.io/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/njleonzhang/docsify-plugin-codefund.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/njleonzhang/docsify-plugin-codefund/issues"
+  },
+  "homepage": "https://github.com/njleonzhang/docsify-plugin-codefund#readme"
+}
