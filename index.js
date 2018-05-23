@@ -4,7 +4,8 @@
       return function(hook, vm) {
         hook.ready(function() {
           var style = document.createElement('style')
-          var css = '#codefund_ad span.cf-wrapper {background-color: rgba(0,0,0,0)}'
+          var css = '#codefund_ad span.cf-wrapper { background-color: rgba(0,0,0,0) } #codefund_ad a.cf-text { color: #444; font-weight: 400; font-size: 10px }'
+
           style.type = 'text/css'
           if (style.styleSheet){
             style.styleSheet.cssText = css
