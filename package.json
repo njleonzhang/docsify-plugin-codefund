@@ -1,6 +1,6 @@
 {
   "name": "docsify-plugin-codefund",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a plugin to make you easy to join up [codefund](https://codesponsor.io/)",
   "main": "index.js",
   "scripts": {
