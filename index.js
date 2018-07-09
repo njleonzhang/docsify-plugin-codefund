@@ -15,7 +15,7 @@
           document.head.appendChild(style)
 
           var script = document.createElement('script')
-          script.src = "https://codesponsor.io/scripts/" + codefundId + "/embed.js"
+          script.src = "https://codefund.io/scripts/" + codefundId + "/embed.js"
           document.body.appendChild(script)
         })
 
