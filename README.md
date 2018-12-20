@@ -1,5 +1,5 @@
 # docsify-plugin-codefund
-a plugin to make you easy to join up [codefund](https://codesponsor.io/)
+a plugin to make you easy to join up [CodeFund](https://codefund.app/)
 
 # Usage
 ```
@@ -17,7 +17,7 @@ window.$docsify = {
   search: 'auto', // default,
 
   plugins: [
-    DocsifyCodefund.create('51d43327-eea3-4e27-bd44-e075e67a84fb') // change to your codefund id
+    DocsifyCodefund.create(15) // change to your CodeFund property id
   ]
 ```
 
