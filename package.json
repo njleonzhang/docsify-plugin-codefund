@@ -1,7 +1,7 @@
 {
   "name": "docsify-plugin-codefund",
-  "version": "1.0.4",
-  "description": "a plugin to make you easy to join up [codefund](https://codesponsor.io/)",
+  "version": "2.0.0",
+  "description": "a plugin to make you easy to join up [codefund](https://codefund.app/)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
