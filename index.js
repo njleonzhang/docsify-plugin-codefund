@@ -1,13 +1,14 @@
 ;(function(window) {
   window.DocsifyCodefund = {
+    scriptEl: null,
     create: function(codefundId) {
       return function(hook, vm) {
         hook.ready(function() {
           window.DocsifyCodefund.injectCodeFundStyle();
-          window.DocsifyCodefund.injectCodeFundScript(codefundId);
         })
 
         hook.doneEach(function () {
+          window.DocsifyCodefund.injectCodeFundScript(codefundId);
           window.DocsifyCodefund.injectCodeFundContainer();
         })
       }
@@ -25,10 +26,15 @@
     },
 
     injectCodeFundScript(codefundId) {
+      if (window.DocsifyCodefund.scriptEl) {
+        window.DocsifyCodefund.scriptEl.remove()
+      }
+
       var script = document.createElement('script')
       script.src = "https://codefund.app/properties/" + codefundId + "/funder.js?template=docsify"
       script.async = "async"
       document.body.appendChild(script)
+      window.DocsifyCodefund.scriptEl = script
     },
 
     injectCodeFundStyle() {
