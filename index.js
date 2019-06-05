@@ -31,7 +31,7 @@
       }
 
       var script = document.createElement('script')
-      script.src = "https://codefund.app/properties/" + codefundId + "/funder.js?template=docsify"
+      script.src = "https://codefund.io/properties/" + codefundId + "/funder.js?template=docsify"
       script.async = "async"
       document.body.appendChild(script)
       window.DocsifyCodefund.scriptEl = script
