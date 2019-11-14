@@ -14,11 +14,12 @@ window.$docsify = {
   subMaxLevel: 2,
   loadSidebar: true,
   disqus: 'vueDataTables',
-  search: 'auto', // default,
+  search: 'auto', // default
 
   plugins: [
     DocsifyCodefund.create(15) // change to your CodeFund property id
   ]
+}
 ```
 
 # Sample
