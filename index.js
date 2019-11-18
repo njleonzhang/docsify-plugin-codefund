@@ -15,7 +15,7 @@
     },
 
     injectCodeFundContainer() {
-      if(document.getElementById("codefund") === null){
+      if (document.getElementById("codefund") === null) {
         let nav = document.getElementsByClassName('sidebar-nav');
         let codefundContainer = document.createElement('div');
         codefundContainer.id = 'codefund';
