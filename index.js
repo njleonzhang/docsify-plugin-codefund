@@ -16,8 +16,8 @@
 
     injectCodeFundContainer: function() {
       if (document.getElementById("codefund") === null) {
-        let nav = document.getElementsByClassName('sidebar-nav');
-        let codefundContainer = document.createElement('div');
+        var nav = document.getElementsByClassName('sidebar-nav');
+        var codefundContainer = document.createElement('div');
         codefundContainer.id = 'codefund';
         nav[0].insertBefore(codefundContainer, nav[0].firstChild);
       }
@@ -27,7 +27,7 @@
       }
     },
 
-    injectCodeFundScript(codefundId) {
+    injectCodeFundScript: function(codefundId) {
       if (window.DocsifyCodefund.scriptEl) {
         window.DocsifyCodefund.scriptEl.remove()
       }
@@ -39,7 +39,7 @@
       window.DocsifyCodefund.scriptEl = script
     },
 
-    injectCodeFundStyle() {
+    injectCodeFundStyle: function() {
       var style = document.createElement('style');
       window.DocsifyCodefund.injectCodeFundContainer();
       var css = '#cf span.cf-wrapper { background-color: transparent!important } #cf a.cf-text { color: #444!important; font-weight: 400!important; font-size: 10px!important }';
