@@ -14,14 +14,14 @@
       }
     },
 
-    injectCodeFundContainer() {
+    injectCodeFundContainer: function() {
       if (document.getElementById("codefund") === null) {
         let nav = document.getElementsByClassName('sidebar-nav');
         let codefundContainer = document.createElement('div');
         codefundContainer.id = 'codefund';
         nav[0].insertBefore(codefundContainer, nav[0].firstChild);
       }
-      
+
       if (document.getElementsByClassName('cf-wrapper').length === 0) {
         window._codefund && window._codefund.serve();
       }
